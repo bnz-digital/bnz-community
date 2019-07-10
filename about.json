@@ -1,7 +1,7 @@
 {
   "name": "BNZ Community",
-  "about_url": null,
-  "license_url": null,
+  "about_url": "https://github.com/bnz-digital/bnz-community",
+  "license_url": "https://github.com/bnz-digital/bnz-community/blob/master/LICENSE",
   "assets": {
   },
   "color_schemes": {
