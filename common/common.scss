@@ -3,90 +3,77 @@
 // -------------
 
 @font-face {
-    font-family: "SerranoWeb";
-    font-weight: 900;
-    font-style: normal;
-    src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-Black.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-Black.woff?v=3") format("woff")
+  font-family: "SerranoWeb";
+  font-weight: 900;
+  font-style: normal;
+  src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-Black.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-Black.woff?v=3") format("woff")
 }
-
 @font-face {
-    font-family: "SerranoWeb";
-    font-weight: 900;
-    font-style: italic;
-    src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-BlackItalic.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-BlackItalic.woff?v=3") format("woff")
+  font-family: "SerranoWeb";
+  font-weight: 900;
+  font-style: italic;
+  src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-BlackItalic.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-BlackItalic.woff?v=3") format("woff")
 }
-
 @font-face {
-    font-family: "SerranoWeb";
-    font-weight: 700;
-    font-style: normal;
-    src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-Bold.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-Bold.woff?v=3") format("woff")
+  font-family: "SerranoWeb";
+  font-weight: 700;
+  font-style: normal;
+  src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-Bold.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-Bold.woff?v=3") format("woff")
 }
-
 @font-face {
-    font-family: "SerranoWeb";
-    font-weight: 700;
-    font-style: italic;
-    src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-BoldItalic.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-BoldItalic.woff?v=3") format("woff")
+  font-family: "SerranoWeb";
+  font-weight: 700;
+  font-style: italic;
+  src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-BoldItalic.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-BoldItalic.woff?v=3") format("woff")
 }
-
 @font-face {
-    font-family: "SerranoWeb";
-    font-weight: 600;
-    font-style: normal;
-    src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-Semibold.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-Semibold.woff?v=3") format("woff")
+  font-family: "SerranoWeb";
+  font-weight: 600;
+  font-style: normal;
+  src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-Semibold.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-Semibold.woff?v=3") format("woff")
 }
-
 @font-face {
-    font-family: "SerranoWeb";
-    font-weight: 600;
-    font-style: italic;
-    src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-SemiboldItalic.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-SemiboldItalic.woff?v=3") format("woff")
+  font-family: "SerranoWeb";
+  font-weight: 600;
+  font-style: italic;
+  src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-SemiboldItalic.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-SemiboldItalic.woff?v=3") format("woff")
 }
-
 @font-face {
-    font-family: "SerranoWeb";
-    font-weight: 300;
-    font-style: normal;
-    src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-Light.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-Light.woff?v=3") format("woff")
+  font-family: "SerranoWeb";
+  font-weight: 300;
+  font-style: normal;
+  src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-Light.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-Light.woff?v=3") format("woff")
 }
-
 @font-face {
-    font-family: "SerranoWeb";
-    font-weight: 300;
-    font-style: italic;
-    src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-LightItalic.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-LightItalic.woff?v=3") format("woff")
+  font-family: "SerranoWeb";
+  font-weight: 300;
+  font-style: italic;
+  src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-LightItalic.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-LightItalic.woff?v=3") format("woff")
 }
-
 @font-face {
-    font-family: "SerranoWeb";
-    font-weight: 100;
-    font-style: normal;
-    src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-Thin.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-Thin.woff?v=3") format("woff")
+  font-family: "SerranoWeb";
+  font-weight: 100;
+  font-style: normal;
+  src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-Thin.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-Thin.woff?v=3") format("woff")
 }
-
 @font-face {
-    font-family: "SerranoWeb";
-    font-weight: 100;
-    font-style: italic;
-    src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-ThinItalic.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-ThinItalic.woff?v=3") format("woff")
+  font-family: "SerranoWeb";
+  font-weight: 100;
+  font-style: italic;
+  src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-ThinItalic.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-ThinItalic.woff?v=3") format("woff")
 }
-
 @font-face {
-    font-family: "SerranoWeb";
-    font-weight: 400;
-    font-style: normal;
-    src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-Regular.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-Regular.woff?v=3") format("woff")
+  font-family: "SerranoWeb";
+  font-weight: 400;
+  font-style: normal;
+  src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-Regular.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-Regular.woff?v=3") format("woff")
 }
-
 @font-face {
-    font-family: "SerranoWeb";
-    font-weight: 400;
-    font-style: italic;
-    src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-Italic.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-Italic.woff?v=3") format("woff")
+  font-family: "SerranoWeb";
+  font-weight: 400;
+  font-style: italic;
+  src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-Italic.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-Italic.woff?v=3") format("woff")
 }
-
-
 
 // ----------------
 // Set up variables
@@ -94,7 +81,7 @@
 
 :root {
 
-  // Colours
+// Colours
 
   // Core
   --blue:     #002f6b;
@@ -108,16 +95,12 @@
   --red:     #CC0000;
 
   // Secondary
-  --teal:       #0B909F;
-  --clementine: #ED6B06;
   --guava:      #E95160;
   --wasabi:     #A1D884;
   --zest:       #FFE500;
   --lightteal:  #20CBD4;
   --lightblue:  #54C0E4;
   --smokeyblue: #7EB0CC;
-  --textgrey:   #777777;
-  --aubergine:  #5A1E58;
 
   // Greys
   --black: #000000;
@@ -127,6 +110,21 @@
   --grey2: #D0D0D0;
   --grey1: #F6F6F6;
   --white: #FFFFFF;
+
+// Type
+
+  // Font families
+  --serrano: "SerranoWeb", "Arial Unicode MS", sans-serif;
+
+  // Sizes
+  --f-sml: 0.875rem; // 14px
+  --f-med:     1rem; // 16px
+  --f-semi: 1.25rem; // 20px
+  --f-lrg:   1.5rem; // 24px
+  --f-xlg:     2rem; // 32px
+  --f-2xl:     3rem; // 48px
+  --f-hero: 3.75rem; // 60px
+
 }
 
 html {
@@ -146,5 +144,5 @@ input,
 button,
 select,
 textarea {
-  font-family: "SerranoWeb", "Arial Unicode MS", sans-serif;
+  font-family: var(--serrano)
 }
