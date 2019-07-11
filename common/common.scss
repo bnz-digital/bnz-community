@@ -2,78 +2,26 @@
 // Declare Fonts
 // -------------
 
-@font-face {
+@mixin declare-serrano($weight, $style, $filename){
   font-family: "SerranoWeb";
-  font-weight: 900;
-  font-style: normal;
-  src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-Black.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-Black.woff?v=3") format("woff")
+  font-weight: $weight;
+  font-style: $style;
+  src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-#{$filename}.woff2?v=3") format("woff2"),
+    url("fonts/SerranoWeb-#{$filename}.woff?v=3") format("woff")
 }
-@font-face {
-  font-family: "SerranoWeb";
-  font-weight: 900;
-  font-style: italic;
-  src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-BlackItalic.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-BlackItalic.woff?v=3") format("woff")
-}
-@font-face {
-  font-family: "SerranoWeb";
-  font-weight: 700;
-  font-style: normal;
-  src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-Bold.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-Bold.woff?v=3") format("woff")
-}
-@font-face {
-  font-family: "SerranoWeb";
-  font-weight: 700;
-  font-style: italic;
-  src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-BoldItalic.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-BoldItalic.woff?v=3") format("woff")
-}
-@font-face {
-  font-family: "SerranoWeb";
-  font-weight: 600;
-  font-style: normal;
-  src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-Semibold.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-Semibold.woff?v=3") format("woff")
-}
-@font-face {
-  font-family: "SerranoWeb";
-  font-weight: 600;
-  font-style: italic;
-  src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-SemiboldItalic.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-SemiboldItalic.woff?v=3") format("woff")
-}
-@font-face {
-  font-family: "SerranoWeb";
-  font-weight: 300;
-  font-style: normal;
-  src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-Light.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-Light.woff?v=3") format("woff")
-}
-@font-face {
-  font-family: "SerranoWeb";
-  font-weight: 300;
-  font-style: italic;
-  src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-LightItalic.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-LightItalic.woff?v=3") format("woff")
-}
-@font-face {
-  font-family: "SerranoWeb";
-  font-weight: 100;
-  font-style: normal;
-  src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-Thin.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-Thin.woff?v=3") format("woff")
-}
-@font-face {
-  font-family: "SerranoWeb";
-  font-weight: 100;
-  font-style: italic;
-  src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-ThinItalic.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-ThinItalic.woff?v=3") format("woff")
-}
-@font-face {
-  font-family: "SerranoWeb";
-  font-weight: 400;
-  font-style: normal;
-  src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-Regular.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-Regular.woff?v=3") format("woff")
-}
-@font-face {
-  font-family: "SerranoWeb";
-  font-weight: 400;
-  font-style: italic;
-  src: url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-Italic.woff2?v=3") format("woff2"),url("fonts/SerranoWeb-Italic.woff?v=3") format("woff")
-}
+
+@include declare-serrano(400, normal, Regular);
+@include declare-serrano(400, italic, Italic);
+@include declare-serrano(100, normal, Thin);
+@include declare-serrano(100, italic, ThinItalic);
+@include declare-serrano(300, normal, Light);
+@include declare-serrano(300, italic, LightItalic);
+@include declare-serrano(600, normal, Semibold);
+@include declare-serrano(600, italic, SemiboldItalic);
+@include declare-serrano(700, normal, Bold);
+@include declare-serrano(700, italic, BoldItalic);
+@include declare-serrano(900, normal, Black);
+@include declare-serrano(900, italic, BlackItalic);
 
 // ----------------
 // Set up variables
