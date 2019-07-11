@@ -1,0 +1,105 @@
+// -------------
+// Declare Fonts
+// -------------
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+  $src: null;
+
+  $extmods: (
+    eot: "?",
+    svg: "#" + str-replace($name, " ", "_")
+  );
+
+  $formats: (
+    otf: "opentype",
+    ttf: "truetype"
+  );
+
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-" + $path + "." + $extmod) format($format), comma);
+  }
+
+  @font-face {
+    font-family: $name;
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
+  }
+}
+
+@include font-face("SerranoWeb", "Regular", 400, normal, woff2 woff);
+@include font-face("SerranoWeb", "Italic", 400, italic, woff2 woff);
+@include font-face("SerranoWeb", "Thin", 100, normal, woff2 woff);
+@include font-face("SerranoWeb", "ThinItalic", 100, italic, woff2 woff);
+@include font-face("SerranoWeb", "Light", 300, normal, woff2 woff);
+@include font-face("SerranoWeb", "LightItalic", 300, italic, woff2 woff);
+@include font-face("SerranoWeb", "Semibold", 600, normal, woff2 woff);
+@include font-face("SerranoWeb", "SemiboldItalic", 600, italic, woff2 woff);
+@include font-face("SerranoWeb", "Bold", 700, normal, woff2 woff);
+@include font-face("SerranoWeb", "BoldItalic", 700, italic, woff2 woff);
+@include font-face("SerranoWeb", "Black", 900, normal, woff2 woff);
+@include font-face("SerranoWeb", "BlackItalic", 900, italic, woff2 woff);
+
+
+// ----------------
+// Set up variables
+// ----------------
+
+:root {
+
+  // Colours
+
+  // Core
+  --blue:     #002f6b;
+  --gold:     #FAA61A;
+  --midnight: #00152F;
+
+  // Action
+  --midblue: #007DC3;
+  --green:   #36A01C;
+  --orange:  #E96D1E;
+  --red:     #CC0000;
+
+  // Secondary
+  --teal:       #0B909F;
+  --clementine: #ED6B06;
+  --guava:      #E95160;
+  --wasabi:     #A1D884;
+  --zest:       #FFE500;
+  --lightteal:  #20CBD4;
+  --lightblue:  #54C0E4;
+  --smokeyblue: #7EB0CC;
+  --textgrey:   #777777;
+  --aubergine:  #5A1E58;
+
+  // Greys
+  --black: #000000;
+  --grey5: #333333;
+  --grey4: #5A5A5A;
+  --grey3: #B2B2B2;
+  --grey2: #D0D0D0;
+  --grey1: #F6F6F6;
+  --white: #FFFFFF;
+}
+
+html {
+  background: white;
+  -webkit-font-feature-settings: "kern" 1,"liga" 1,"calt" 1,"pnum" 1,"tnum" 0,"onum" 1,"lnum" 0,"dlig" 0;
+  -moz-font-feature-settings: "kern" 1,"liga" 1,"calt" 1,"pnum" 1,"tnum" 0,"onum" 1,"lnum" 0,"dlig" 0;
+  -ms-font-feature-settings: "kern" 1,"liga" 1,"calt" 1,"pnum" 1,"tnum" 0,"onum" 1,"lnum" 0,"dlig" 0;
+  font-feature-settings: "kern" 1,"liga" 1,"calt" 1,"pnum" 1,"tnum" 0,"onum" 1,"lnum" 0,"dlig" 0;
+  color: var(--blue);
+  font-size: 100%;
+  line-height: 1.5625;
+}
+
+html,
+body,
+input,
+button,
+select,
+textarea {
+  font-family: "SerranoWeb", "Arial Unicode MS", sans-serif;
+}

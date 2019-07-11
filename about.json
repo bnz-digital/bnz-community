@@ -5,5 +5,17 @@
   "assets": {
   },
   "color_schemes": {
+    "BNZ Community": {
+      "primary": "002f6b",
+      "secondary": "007DC3",
+      "tertiary": "E95160",
+      "quaternary": "FFE500",
+      "header_background": "00152F",
+      "header_primary": "FFFFFF",
+      "highlight": "FFE500",
+      "danger": "E96D1E",
+      "success": "36A01C",
+      "love": "E95160"
+    }
   }
 }
