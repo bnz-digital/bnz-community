@@ -6,6 +6,3 @@
   },
   "color_schemes": {}
 }
-
-
-append($src, url("https://www.bnz.co.nz/serrano/fonts/SerranoWeb-" + $path + "." + $extmod) format($format), comma)
