@@ -168,6 +168,7 @@ html {
   font-feature-settings: var(--font-features);
   font-kerning: normal;
   text-rendering: optimizeLegibility;
+  color: var(--midnight);
 }
 
 body {
@@ -197,4 +198,67 @@ a:not([class]) {
   background-repeat: no-repeat;
   background-size: 100% 1px;
   background-position: 0 100%;
+}
+
+// ------
+// Layout
+// ------
+
+// Header
+
+.d-header {
+  height: 3.75rem;
+  box-shadow: none;
+  box-shadow: inset 0 5px var(--blue);
+  background-color: var(--grey1);
+
+  .title a {
+    display: inline-block;
+    background-color: var(--blue);
+    position: relative;
+    top: 0;
+    transition: 120ms ease-in-out;
+
+    &:hover {
+      top: 5px;
+      transition: 100ms ease-out;
+    }
+  }
+
+  #site-logo {
+    height: 2rem;
+    padding: 15px 10px 5px 15px;
+  }
+}
+
+.d-header-icons {
+  // User display picture
+  .icon img.avatar {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+  // Menu and search icons
+  .fa.d-icon.svg-icon {
+    opacity: 0;
+  }
+  .icon.btn-flat {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1rem;
+    &:hover {
+      background-color: white;
+    }
+  }
+}
+
+#search-button {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17'%3E%3Ccircle fill='none' stroke='currentColor' cx='6.5' cy='6.5' r='6'/%3E%3Cpath fill='none' stroke='currentColor' stroke-width='2' d='M11.5 11.5l4 4'/%3E%3C/svg%3E");
+}
+
+#toggle-hamburger-menu {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 12'%3E%3Cpath d='M0 10h14v2H0zM0 0h14v2H0zm0 5h14v2H0z' fill='currentColor'/%3E%3C/svg%3E");
+}
+
+#current-user.header-dropdown-toggle {
+  margin-left: 0.375rem;
 }
