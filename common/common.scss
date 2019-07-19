@@ -90,6 +90,20 @@
 // Set up variables
 // ----------------
 
+// Sass variables that Discourse uses
+
+$primary:           #002f6b;
+$secondary:         #ffffff;
+$tertiary:          #007DC3;
+$quaternary:        #FAA61A;
+$header_background: #ffffff;
+$header_primary:    #002f6b;
+$highlight:         rgba(0,47,107,0.1);
+$danger:            #E96D1E;
+$success:           #36A01C;
+$love:              #E95160;
+
+
 :root {
 
 // Colours
@@ -121,6 +135,11 @@
   --grey2: #D0D0D0;
   --grey1: #F6F6F6;
   --white: #FFFFFF;
+
+  // Transparent
+  --blue-10:    rgba(0,47,107,0.1);
+  --blue-30:    rgba(0,47,107,0.3);
+  --midblue-10: rgba(0,125,195,0.1);
 
 // Type
 
@@ -232,36 +251,68 @@ a:not([class]) {
   }
 }
 
-.d-header-icons {
-  position: relative;
-  top: 2px;
-  // User display picture
-  .icon img.avatar {
-    width: 1.875rem;
-    height: 1.875rem;
+  .d-header-icons {
+    position: relative;
+    top: 2px;
+    // User display picture
+    .icon img.avatar {
+      width: 1.875rem;
+      height: 1.875rem;
+    }
+    // Menu and search icons
+    .fa.d-icon.svg-icon {
+      opacity: 0;
+    }
+    .icon {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 1rem;
+      &:hover {
+        background-color: white;
+      }
+    }
   }
-  // Menu and search icons
-  .fa.d-icon.svg-icon {
-    opacity: 0;
+
+  #search-button {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17'%3E%3Ccircle fill='none' stroke='currentColor' cx='6.5' cy='6.5' r='6'/%3E%3Cpath fill='none' stroke='currentColor' stroke-width='2' d='M11.5 11.5l4 4'/%3E%3C/svg%3E");
   }
-  .icon {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 1rem;
-    &:hover {
-      background-color: white;
+
+  #toggle-hamburger-menu {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 12'%3E%3Cpath d='M0 10h14v2H0zM0 0h14v2H0zm0 5h14v2H0z' fill='currentColor'/%3E%3C/svg%3E");
+  }
+
+  #current-user.header-dropdown-toggle {
+    margin-left: 0.375rem;
+  }
+
+// Navigation menu panels
+
+.menu-panel.drop-down {
+  right: 0;
+}
+
+  .drop-down-mode .d-header-icons .active .icon {
+    border: none;
+  }
+
+  .menu-panel {
+    border: none;
+    box-shadow: 0 3px 15px var(--blue-10);
+    padding: 1.25rem;
+  }
+
+div.menu-links-header {
+  .fa,
+  a {
+    color: var(--midnight);
+  }
+
+  a {
+    &:hover,
+    &:focus {
+      background-color: var(--midblue-10);
+      outline: none;
     }
   }
 }
 
-#search-button {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17'%3E%3Ccircle fill='none' stroke='currentColor' cx='6.5' cy='6.5' r='6'/%3E%3Cpath fill='none' stroke='currentColor' stroke-width='2' d='M11.5 11.5l4 4'/%3E%3C/svg%3E");
-}
-
-#toggle-hamburger-menu {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 12'%3E%3Cpath d='M0 10h14v2H0zM0 0h14v2H0zm0 5h14v2H0z' fill='currentColor'/%3E%3C/svg%3E");
-}
-
-#current-user.header-dropdown-toggle {
-  margin-left: 0.375rem;
-}
