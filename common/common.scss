@@ -196,6 +196,10 @@ body {
   overflow-x: hidden;
 }
 
+hr {
+  border-top: 1px solid var(--grey1);
+}
+
 // ----------
 // Typography
 // ----------
@@ -248,8 +252,36 @@ a:not([class]) {
     box-sizing: border-box;
     height: 3.75rem;
     padding: 15px 10px 12.5px 15px;
+    .logo-small {
+      padding: 0.625rem;
+    }
   }
 }
+
+  .extra-info-wrapper {
+    padding: 5px 1rem 0;
+    .topic-link {
+      color: var(--blue);
+    }
+    .badge-wrapper.bullet,
+    .badge-wrapper.bar,
+    .badge-wrapper.none {
+      span.badge-category {
+        color: var(--blue);
+      }
+    }
+  }
+
+// Badges
+  .extra-info-wrapper .badge-wrapper.bullet 
+  .badge-category-parent-bg, 
+  .extra-info-wrapper .badge-wrapper.bullet .badge-category-bg {
+    border-radius: 50%;
+  }
+
+  .extra-info h1 {
+    font-size: var(--f-semi);
+  }
 
   .d-header-icons {
     position: relative;
@@ -299,7 +331,17 @@ a:not([class]) {
     border: none;
     box-shadow: 0 3px 15px var(--blue-10);
     padding: 1.25rem;
+
+    li a,
+    li.heading a {
+      &:hover,
+      &:focus {
+        background-color: var(--grey1);
+        outline: none;
+      }
+    }
   }
+
 
 div.menu-links-header {
   .fa,
@@ -316,3 +358,25 @@ div.menu-links-header {
   }
 }
 
+// User menu panel
+
+.user-menu .notifications {
+  li {
+    background-color: var(--midblue-10);
+    &:hover,
+    &:focus {
+      background-color: var(--grey1);
+      outline: none; 
+    }
+    span:first-child {
+      color: var(--midnight);
+    }
+  }
+  a {
+    background-image: none;
+  }
+  .d-icon {
+    color: var(--midnight);
+    opacity: 0.5;
+  }
+}
