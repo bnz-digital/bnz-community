@@ -4,5 +4,18 @@
   "license_url": "https://github.com/bnz-digital/bnz-community/blob/master/LICENSE",
   "assets": {
   },
-  "color_schemes": {}
+  "color_schemes": {
+    "BNZ Community": {
+      "primary": "002f6b",
+      "secondary": "FFFFFF",
+      "tertiary": "007DC3",
+      "quaternary": "FAA61A",
+      "header_background": "F6F6F6",
+      "header_primary": "002f6b",
+      "highlight": "E5F2F9",
+      "danger": "E96D1E",
+      "success": "36A01C",
+      "love": "E95160"
+    }
+  }
 }
