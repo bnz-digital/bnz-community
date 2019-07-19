@@ -226,12 +226,15 @@ a:not([class]) {
   }
 
   #site-logo {
-    height: 2rem;
-    padding: 15px 10px 5px 15px;
+    box-sizing: border-box;
+    height: 3.75rem;
+    padding: 15px 10px 12.5px 15px;
   }
 }
 
 .d-header-icons {
+  position: relative;
+  top: 2px;
   // User display picture
   .icon img.avatar {
     width: 1.875rem;
@@ -241,7 +244,7 @@ a:not([class]) {
   .fa.d-icon.svg-icon {
     opacity: 0;
   }
-  .icon.btn-flat {
+  .icon {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 1rem;
