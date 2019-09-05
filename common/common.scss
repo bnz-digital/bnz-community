@@ -559,3 +559,32 @@ div.menu-links-header {
   font-size: var(--f-med);
   height: var(--u4);
 }
+
+// ----------
+// Topic list
+// ----------
+
+.topic-list-item {
+  border-bottom: none;
+}
+
+.topic-list {
+  th, td {
+    padding: var(--u2) var(--u1);
+  }
+
+  .link-bottom-line {
+    margin: var(--u1) 0;
+  }
+}
+
+.topic-list-main-link, .topic-list .main-link, .latest-topic-list-item .main-link {
+  font-size: var(--f-med);
+}
+
+.topic-list-main-link a.title, 
+.topic-list .main-link a.title, 
+.latest-topic-list-item .main-link a.title {
+  padding: var(--u2) 0;
+  color: black;
+}
