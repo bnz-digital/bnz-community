@@ -262,6 +262,7 @@ a:not([class]) {
 
 .btn {
   border-radius: var(--rounded);
+  min-height: var(--u4);
 }
 
 // Alerts
@@ -278,6 +279,33 @@ a:not([class]) {
 
   .alert-info {
     background-color: var(--midblue-10);
+  }
+}
+
+// Inputs
+
+input[type="text"], 
+input[type="password"], 
+input[type="datetime"], 
+input[type="datetime-local"], 
+input[type="date"], 
+input[type="month"], 
+input[type="time"], 
+input[type="week"], 
+input[type="number"], 
+input[type="email"], 
+input[type="url"], 
+input[type="search"], 
+input[type="tel"], 
+input[type="color"] {
+  min-height: var(--u4);
+  border-radius: var(--lilround);
+}
+
+div.ac-wrap {
+  border-radius: var(--lilround);
+  input[type="text"] {
+    min-height: var(--u4);
   }
 }
 
@@ -449,6 +477,38 @@ div.menu-links-header {
   .d-icon {
     color: var(--midnight);
     opacity: 0.5;
+  }
+}
+
+// Search
+
+.search-container {
+
+  .search-bar {
+    min-height: var(--u4);
+    // Search button
+    .search-cta {
+      min-height: var(--u4);
+      min-width: var(--u4);
+    }
+  }
+
+  .search-advanced-sidebar {
+
+    .search-advanced-title {
+      border-radius: var(--rounded) var(--rounded) 0 0;
+      padding: var(--u1) 1rem;
+    }
+
+    .search-advanced-filters {
+      .control-group {
+        margin: var(--u1) 0;
+      }
+      .control-label {
+        font-size: var(--f-sml);
+        font-weight: bold;
+      }
+    }
   }
 }
 
