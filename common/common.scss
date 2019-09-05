@@ -139,7 +139,15 @@ $love:              #E95160;
   // Transparent
   --blue-10:    rgba(0,47,107,0.1);
   --blue-30:    rgba(0,47,107,0.3);
+  --blue-50:    rgba(0,47,107,0.5);
   --midblue-10: rgba(0,125,195,0.1);
+
+  // Shadows
+  --shadow-sml-light: 0 1px 3px var(--blue-10);
+  --shadow-sml-med:   0 1px 3px var(--blue-30);
+  --shadow-sml-dark:  0 1px 3px var(--blue-50);
+
+  --shadow-lrg-light:   0 3px 15px var(--blue-10);
 
 // Type
 
@@ -161,6 +169,19 @@ $love:              #E95160;
 // Widths
 
   --content-max: 75rem;
+
+  // Units
+  --u1: 0.625rem;
+  --u2: calc( 2 * var(--u1) );
+  --u3: calc( 3 * var(--u1) );
+  --u4: calc( 4 * var(--u1) );
+  --u6: calc( 6 * var(--u1) );
+  --u8: calc( 8 * var(--u1) );
+
+  // Border radius
+  --lilround: 3px;
+  --rounded: 5px;
+  --circular: 50%;
 
 }
 
@@ -223,6 +244,29 @@ a:not([class]) {
   background-position: 0 100%;
 }
 
+// ----------
+// Components
+// ----------
+
+// Buttons
+
+.btn {
+  border-radius: var(--rounded);
+}
+
+// Alerts
+
+.alert {
+  border-radius: var(--rounded);
+  padding: var(--u2) var(--u3);
+}
+
+// Category colour badges
+
+.badge-wrapper.bullet .badge-category-parent-bg, .badge-wrapper.bullet .badge-category-bg {
+  border-radius: var(--circular);
+}
+
 // ------
 // Layout
 // ------
@@ -241,6 +285,7 @@ a:not([class]) {
     position: relative;
     top: 0;
     transition: 120ms ease-in-out;
+    border-radius: 0 0 var(--lilround) var(--lilround);
 
     &:hover {
       top: 5px;
@@ -276,7 +321,7 @@ a:not([class]) {
   .extra-info-wrapper .badge-wrapper.bullet 
   .badge-category-parent-bg, 
   .extra-info-wrapper .badge-wrapper.bullet .badge-category-bg {
-    border-radius: 50%;
+    border-radius: var(--circular);
   }
 
   .extra-info h1 {
@@ -286,11 +331,14 @@ a:not([class]) {
   .d-header-icons {
     position: relative;
     top: 2px;
+    border-radius: var(--rounded);
+
     // User display picture
     .icon img.avatar {
       width: 1.875rem;
       height: 1.875rem;
     }
+
     // Menu and search icons
     .fa.d-icon.svg-icon {
       opacity: 0;
@@ -299,6 +347,7 @@ a:not([class]) {
       background-repeat: no-repeat;
       background-position: center;
       background-size: 1rem;
+      border-radius: 3px;
       &:hover {
         background-color: white;
       }
@@ -321,6 +370,7 @@ a:not([class]) {
 
 .menu-panel.drop-down {
   right: 0;
+  border-radius: var(--rounded);
 }
 
   .drop-down-mode .d-header-icons .active .icon {
@@ -329,7 +379,7 @@ a:not([class]) {
 
   .menu-panel {
     border: none;
-    box-shadow: 0 3px 15px var(--blue-10);
+    box-shadow: var(--shadow-lrg-light);
     padding: 1.25rem;
 
     li a,
@@ -338,6 +388,7 @@ a:not([class]) {
       &:focus {
         background-color: var(--grey1);
         outline: none;
+        border-radius: var(--rounded);
       }
     }
   }
@@ -379,4 +430,43 @@ div.menu-links-header {
     color: var(--midnight);
     opacity: 0.5;
   }
+}
+
+// List controls
+
+// "All categories" button/dropdown
+
+.list-controls {
+  .combo-box .combo-box-header {
+    color: var(--midnight);
+    border: 1px solid var(--midnight);
+    font-size: var(--f-sml);
+    height: var(--u1);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+}
+
+.select-kit.combo-box.select-kit-header.is-focused {
+  border: none;
+  border-radius: var(--lilround);
+  box-shadow: inset 0 0 var(--lilround) var(--midblue-10);
+}
+
+.list-controls .combo-box .combo-box-header {
+  border-radius: var(--rounded);
+  padding: 15px var(--u1);
+}
+
+// Search categories
+
+.select-kit.combo-box.category-drop .select-kit-body {
+  border-radius: var(--rounded);
+  box-shadow: var(--shadow-lrg-light);
+}
+
+// Nav pills
+
+.nav-pills > li > a {
+  border-radius: var(--rounded);
 }
