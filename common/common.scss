@@ -185,6 +185,16 @@ $love:              #E95160;
 
 }
 
+// ---------------------------
+// Helper functions and mixins
+// ---------------------------
+
+@mixin caps {
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+
 // ------
 // Resets
 // ------
@@ -259,6 +269,16 @@ a:not([class]) {
 .alert {
   border-radius: var(--rounded);
   padding: var(--u2) var(--u3);
+  margin: var(--u2) 0;
+
+  .close {
+    top: auto;
+    right: var(--u2);
+  }
+
+  .alert-info {
+    background-color: var(--midblue-10);
+  }
 }
 
 // Category colour badges
@@ -440,10 +460,9 @@ div.menu-links-header {
   .combo-box .combo-box-header {
     color: var(--midnight);
     border: 1px solid var(--midnight);
-    font-size: var(--f-sml);
-    height: var(--u1);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    height: var(--u4);
+    text-transform: capitalize;
+    font-size: var(--f-med);
   }
 }
 
@@ -469,4 +488,14 @@ div.menu-links-header {
 
 .nav-pills > li > a {
   border-radius: var(--rounded);
+  height: var(--u4);
+  font-size: var(--f-med);
+  background-image: none;
+}
+
+// New topic button
+
+.list-controls .btn {
+  font-size: var(--f-med);
+  height: var(--u4);
 }
