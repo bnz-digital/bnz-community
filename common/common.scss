@@ -90,20 +90,6 @@
 // Set up variables
 // ----------------
 
-// Sass variables that Discourse uses
-
-$primary:           #002f6b;
-$secondary:         #FFFFFF;
-$tertiary:          #007DC3;
-$quaternary:        #FAA61A;
-$header_background: #F6F6F6;
-$header_primary:    #002f6b;
-$highlight:         rgba(0,47,107,0.1);
-$danger:            #E96D1E;
-$success:           #36A01C;
-$love:              #E95160;
-
-
 :root {
 
 // Colours
@@ -184,6 +170,19 @@ $love:              #E95160;
   --circular: 50%;
 
 }
+
+// Sass variables that Discourse uses
+
+$primary:           var(--midnight);
+$secondary:         white;
+$tertiary:          var(--blue);
+$quaternary:        var(--midblue);
+$header_background: white;
+$header_primary:    var(--blue);
+$highlight:         var(--zest);
+$danger:            var(--red);
+$success:           var(--green);
+$love:              var(--blue);
 
 // ---------------------------
 // Helper functions and mixins
@@ -332,7 +331,7 @@ div.ac-wrap {
 // Group boxes
 
 .groups-boxes .group-box {
-  border-radius: var(rounded);
+  border-radius: var(--rounded);
 }
 
 // ------
