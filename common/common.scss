@@ -201,6 +201,12 @@ $love:              var(--blue);
 
 // URI icons
 
+@mixin icon {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1rem;
+}
+
 @mixin icon-mag {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17'%3E%3Ccircle fill='none' stroke='currentColor' cx='6.5' cy='6.5' r='6'/%3E%3Cpath fill='none' stroke='currentColor' stroke-width='2' d='M11.5 11.5l4 4'/%3E%3C/svg%3E");
 }
@@ -447,10 +453,8 @@ div.ac-wrap {
       opacity: 0;
     }
     .icon {
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 1rem;
-      border-radius: 3px;
+      @include icon;
+      border-radius: var(--lilround);
       &:hover {
         background-color: white;
       }
@@ -572,7 +576,7 @@ div.menu-links-header {
 // "All categories" button/dropdown
 
 .list-controls {
-  left-padding: var(--u2);
+  padding: 0 var(--u2);
 
   .combo-box .combo-box-header {
     color: var(--midnight);
@@ -659,21 +663,24 @@ div.menu-links-header {
     text-align: left;
     padding: 0;
 
+    @mixin icon-before {
+      content: '';
+      width: 1rem;
+      @include icon;
+    }
+
     a.badge-posts .number::before {
-      content: 'replies';
-      width: var(--u2);
+      @include icon-before;
       @include icon-speechbubble;
     }
 
     &.views .number::before {
-      content: 'views';
-      width: var(--u2);
+      @include icon-before;
       @include icon-eye;
     }
 
     a.post-acitivty .relative-date::before {
-      content: 'activity';
-      width: var(--u2);
+      @include icon-before;
       @include icon-activity;
     }
 
