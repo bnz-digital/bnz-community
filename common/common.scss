@@ -173,11 +173,11 @@
 
 // Sass variables that Discourse uses
 
-$primary:           var(--midnight);
+$primary:           var(--grey5);
 $secondary:         white;
-$tertiary:          var(--blue);
+$tertiary:          var(--midblue);
 $quaternary:        var(--midblue);
-$header_background: white;
+$header_background: var(--grey1);
 $header_primary:    var(--blue);
 $highlight:         var(--zest);
 $danger:            var(--red);
@@ -191,6 +191,18 @@ $love:              var(--blue);
 @mixin caps {
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+@mixin hide-accessibly {
+  position: absolute !important;
+  opacity: 0;
+  pointer-events: none;
+}
+
+// URI icons
+
+@mixin icon-mag {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17'%3E%3Ccircle fill='none' stroke='currentColor' cx='6.5' cy='6.5' r='6'/%3E%3Cpath fill='none' stroke='currentColor' stroke-width='2' d='M11.5 11.5l4 4'/%3E%3C/svg%3E");
 }
 
 
@@ -324,8 +336,17 @@ div.ac-wrap {
 
 // Category colour badges
 
+.badge-wrapper {
+  font-size: var(--f-sml);
+}
+
 .badge-wrapper.bullet .badge-category-parent-bg, .badge-wrapper.bullet .badge-category-bg {
   border-radius: var(--circular);
+}
+
+.badge-wrapper .badge-category .category-name {
+  color: var(--grey5);
+  font-weight: normal;
 }
 
 // Group boxes
@@ -363,7 +384,7 @@ div.ac-wrap {
   #site-logo {
     box-sizing: border-box;
     height: 3.75rem;
-    padding: 15px 10px 12.5px 15px;
+    padding: 15px 15px 12.5px 20px;
     .logo-small {
       padding: 0.625rem;
     }
@@ -422,7 +443,7 @@ div.ac-wrap {
   }
 
   #search-button {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17'%3E%3Ccircle fill='none' stroke='currentColor' cx='6.5' cy='6.5' r='6'/%3E%3Cpath fill='none' stroke='currentColor' stroke-width='2' d='M11.5 11.5l4 4'/%3E%3C/svg%3E");
+    @include icon-mag;
   }
 
   #toggle-hamburger-menu {
@@ -536,6 +557,8 @@ div.menu-links-header {
 // "All categories" button/dropdown
 
 .list-controls {
+  left-padding: var(--u2);
+
   .combo-box .combo-box-header {
     color: var(--midnight);
     border: 1px solid var(--midnight);
@@ -570,6 +593,10 @@ div.menu-links-header {
   height: var(--u4);
   font-size: var(--f-med);
   background-image: none;
+
+  &:hover {
+    background-color: var();
+  }
 }
 
 // New topic button
@@ -585,11 +612,33 @@ div.menu-links-header {
 
 .topic-list-item {
   border-bottom: none;
+  transition: 100ms;
+
+  &:hover {
+    background-color: var(--grey1);
+    transition: 50ms;
+  };
 }
 
 .topic-list {
+  thead {
+    @include hide-accessibly();
+  }
+  tbody {
+    border: none;
+  }
   th, td {
     padding: var(--u2) var(--u1);
+    color: var(--grey5);
+
+    &:first-of-type {
+      padding-left: var(--u2);
+    }
+
+    .num {
+      text-align: left;
+      padding: 0;
+    }
   }
 
   .link-bottom-line {
@@ -605,7 +654,7 @@ div.menu-links-header {
 .topic-list .main-link a.title, 
 .latest-topic-list-item .main-link a.title {
   padding: var(--u2) 0;
-  color: black;
+  color: var(--midnight);
 }
 
 .topic-list-item.visited a.title:not(.badge-notification), 
