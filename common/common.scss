@@ -309,10 +309,30 @@ div.ac-wrap {
   }
 }
 
+// Combo box
+
+.select-kit.combo-box {
+  .select-kit-header {
+    height: var(--u4);
+    border-radius: var(--lilround);
+  }
+  .select-kit-body {
+    border-radius: var(--rounded);
+    box-shadow: var(--shadow-lrg-light);
+  }
+}
+
+
 // Category colour badges
 
 .badge-wrapper.bullet .badge-category-parent-bg, .badge-wrapper.bullet .badge-category-bg {
   border-radius: var(--circular);
+}
+
+// Group boxes
+
+.groups-boxes .group-box {
+  border-radius: var(rounded);
 }
 
 // ------
@@ -574,12 +594,12 @@ div.menu-links-header {
   }
 
   .link-bottom-line {
-    margin: var(--u1) 0;
+    margin: 0;
   }
 }
 
 .topic-list-main-link, .topic-list .main-link, .latest-topic-list-item .main-link {
-  font-size: var(--f-med);
+  font-size: var(--f-semi);
 }
 
 .topic-list-main-link a.title, 
@@ -587,4 +607,10 @@ div.menu-links-header {
 .latest-topic-list-item .main-link a.title {
   padding: var(--u2) 0;
   color: black;
+}
+
+.topic-list-item.visited a.title:not(.badge-notification), 
+est-topic-list-item.visited a.title:not(.badge-notification), 
+.category-topic-link.visited a.title:not(.badge-notification) {
+  color: var(--grey4);
 }
