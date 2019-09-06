@@ -661,14 +661,20 @@ div.menu-links-header {
 
     a.badge-posts .number::before {
       content: 'replies';
+      width: var(--u2);
+      @include icon-speechbubble;
     }
 
     &.views .number::before {
       content: 'views';
+      width: var(--u2);
+      @include icon-eye;
     }
 
     a.post-acitivty .relative-date::before {
       content: 'activity';
+      width: var(--u2);
+      @include icon-activity;
     }
 
   }
