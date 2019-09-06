@@ -649,15 +649,28 @@ div.menu-links-header {
     &:first-of-type {
       padding-left: var(--u2);
     }
-
-    .num {
-      text-align: left;
-      padding: 0;
-    }
   }
 
   .link-bottom-line {
     margin: 0;
+  }
+
+  .num {
+    text-align: left;
+    padding: 0;
+
+    a.badge-posts .number::before {
+      content: 'replies';
+    }
+
+    &.views .number::before {
+      content: 'views';
+    }
+
+    a.post-acitivty .relative-date::before {
+      content: 'activity';
+    }
+
   }
 }
 
