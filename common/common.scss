@@ -664,7 +664,7 @@ div.menu-links-header {
     padding: 0;
 
     @mixin icon-before {
-      content: '';
+      content: ' ';
       width: 1rem;
       @include icon;
     }
