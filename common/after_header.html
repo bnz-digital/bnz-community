@@ -1,6 +1,16 @@
 <script type="text/javascript">
   var homeLink = document.getElementById('site-logo').parentElement;
+
   var communityTab = document.createElement('a');
-  communityTab.appendChild(document.createTextNode("Community"));
+  communityTab.setAttribute('id','community-tab');
+  communityTab.setAttribute('href','/');
+
+  var communityTabText = document.createElement('h1');
+  communityTabText.setAttribute('id', 'community-tab_title');
+  
+  communityTab.appendChild(communityTabText);
+  communityTabText.appendChild(document.createTextNode("Community"));
+
   homeLink.parentNode.insertBefore(communityTab, homeLink.nextSibling);
+  homeLink.parentNode.setAttribute('href', 'https://www.bnz.co.nz');
 </script>

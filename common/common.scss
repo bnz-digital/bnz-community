@@ -402,9 +402,6 @@ div.ac-wrap {
     border-radius: 0 0 var(--lilround) var(--lilround);
     color: white;
     height: 3.75rem;
-    font-size: var(--f-lrg);
-    font-weight: bold;
-    height: 3.75rem;
 
     &:visited {
       color: white;
@@ -425,6 +422,14 @@ div.ac-wrap {
       padding: 0.625rem;
     }
   }
+
+  #community-tab {
+    margin-left: 8px;
+  }
+
+    #community-tab-title {
+      padding: 17px 12px 0;
+    }
 }
 
   .extra-info-wrapper {
