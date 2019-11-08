@@ -254,7 +254,6 @@ html {
   font-feature-settings: var(--font-features);
   font-kerning: normal;
   text-rendering: optimizeLegibility;
-  color: var(--midnight);
 }
 
 body {
@@ -355,6 +354,9 @@ div.ac-wrap {
   .select-kit-body {
     border-radius: var(--rounded);
     box-shadow: var(--shadow-lrg-light);
+  }
+  &.mini-tag-chooser .select-kit-header {
+    height: var(--u4);
   }
 }
 
@@ -657,8 +659,13 @@ div.menu-links-header {
   background-image: none;
 
   &:hover {
-    background-color: var();
+    background-color: var(--midblue-10);
   }
+}
+
+.top-lists .single-select {
+  margin-left: var(--u2);
+  margin-top: var(--u1);
 }
 
 // New topic button
@@ -747,11 +754,29 @@ div.menu-links-header {
 .topic-list .main-link a.title, 
 .latest-topic-list-item .main-link a.title {
   padding: var(--u2) 0;
-  color: var(--midnight);
+  color: var(--blue);
 }
 
 .topic-list-item.visited a.title:not(.badge-notification), 
 est-topic-list-item.visited a.title:not(.badge-notification), 
 .category-topic-link.visited a.title:not(.badge-notification) {
-  color: var(--grey4);
+  color: var(--midnight);
 }
+
+// New Topic panel
+
+.composer-popup {
+  background: var(--midblue-10);
+}
+
+.d-editor-textarea-wrapper {
+  border-radius: var(--lilround);
+}
+
+#reply-control .save-or-cancel .cancel {
+  color: var(--midblue);
+}
+
+// Thread page
+
+.topic-title {}
