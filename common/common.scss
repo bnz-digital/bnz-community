@@ -430,6 +430,10 @@ div.ac-wrap {
     #community-tab-title {
       padding: 17px 12px 0;
     }
+
+  .panel {
+    margin-right: var(--u2);
+  }
 }
 
   .extra-info-wrapper {
@@ -591,6 +595,25 @@ div.menu-links-header {
   }
 }
 
+// applet wrapper
+
+.wrap {
+  max-width: var(--content-max);
+}
+
+.archetype-regular,
+.search-page,
+.admin-interface {
+  .wrap {
+  box-sizing: border-box;
+  padding: 0;
+
+    div:nth-of-type(2) {
+      margin: 0 var(--u2);
+    }
+  }
+}
+
 // List controls
 
 // "All categories" button/dropdown
@@ -645,6 +668,11 @@ div.menu-links-header {
   height: var(--u4);
 }
 
+.discourse-no-touch .btn:hover, 
+.discourse-no-touch .btn.btn-hover {
+  background: var(--midblue);
+}
+
 // ----------
 // Topic list
 // ----------
@@ -672,6 +700,10 @@ div.menu-links-header {
 
     &:first-of-type {
       padding-left: var(--u2);
+    }
+
+    &:last-of-type {
+      padding-right: var(--u2);
     }
   }
 

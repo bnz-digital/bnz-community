@@ -6,11 +6,17 @@
   communityTab.setAttribute('href','/');
 
   var communityTabText = document.createElement('h1');
-  communityTabText.setAttribute('id', 'community-tab_title');
+  communityTabText.setAttribute('id', 'community-tab-title');
   
   communityTab.appendChild(communityTabText);
   communityTabText.appendChild(document.createTextNode("Community"));
 
-  homeLink.parentNode.insertBefore(communityTab, homeLink.nextSibling);
-  homeLink.parentNode.setAttribute('href', 'https://www.bnz.co.nz');
+  if ( !document.getElementById('site-logo').classList.contains('logo-small') ) {
+    homeLink.parentNode.insertBefore(communityTab, homeLink.nextSibling);
+    homeLink.parentNode.setAttribute('href', 'https://www.bnz.co.nz');
+  };
+
+  // add event listener to site logo's classlist. if the class list changes remove the community tab
+
+  
 </script>
