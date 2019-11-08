@@ -523,8 +523,21 @@ div.ac-wrap {
         outline: none;
         border-radius: var(--rounded);
       }
+      &.widget-link {
+        &:hover,
+        &:focus {
+          background-color: var(--midblue-10);
+          border-radius: var(--rounded);
+        }
+      }
     }
+
   }
+
+.menu-panel li a.widget-link:hover, 
+.menu-panel li a.widget-link:focus, 
+.menu-panel li.heading a.widget-link:hover, 
+.menu-panel li.heading a.widget-link:focus
 
 
 div.menu-links-header {
@@ -540,6 +553,13 @@ div.menu-links-header {
       outline: none;
     }
   }
+}
+
+// Modals
+
+.bootbox.modal {
+  border-radius: var(--rounded);
+  padding: var(--u1);
 }
 
 // User menu panel
@@ -605,19 +625,16 @@ div.menu-links-header {
 
 .archetype-regular,
 .search-page,
+.user-summary-page,
 .admin-interface {
   #main-outlet.wrap {
     box-sizing: border-box;
-    padding: 0;
+    padding: calc( 9 * var(--u1) ) 0 0;
 
     &>div:nth-of-type(2) {
       margin: 0 var(--u2);
     }
   }
-}
-
-#main-outlet {
-  padding-top: var(--u8);
 }
 
 // List controls
@@ -764,7 +781,7 @@ div.menu-links-header {
 .topic-list-item.visited a.title:not(.badge-notification), 
 est-topic-list-item.visited a.title:not(.badge-notification), 
 .category-topic-link.visited a.title:not(.badge-notification) {
-  color: var(--midnight);
+  color: var(--grey5);
 }
 
 // New Topic panel
@@ -777,15 +794,25 @@ est-topic-list-item.visited a.title:not(.badge-notification),
   border-radius: var(--lilround);
 }
 
-#reply-control .save-or-cancel .cancel {
-  color: var(--midblue);
+#reply-control {
+  max-width: var(--content-max);
+  border-radius: var(--rounded) var(--rounded) 0 0;
+  padding-bottom: var(--u1);
+  .save-or-cancel .cancel {
+    color: var(--midblue);
+  }
+}
+
+.open .grippie,
+#reply-control.draft, #reply-control.saving {
+  border-radius: var(--rounded) var(--rounded) 0 0;
 }
 
 // Thread page
 
 .topic-title {
   h1 a {
-    color: var(--blue);
+    color: var(--midnight);
   }
 }
 
