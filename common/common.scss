@@ -752,7 +752,7 @@ div.menu-links-header {
 
     a.badge-posts .number,
     &.views span.number,
-    a.post-acitivty .relative-date {
+    span.relative-date {
       position: relative;
       padding-left: calc(var(--icon-width) + var(--u1));
       &::before {
@@ -767,13 +767,15 @@ div.menu-links-header {
 
     a.badge-posts .number::before {
       @include icon-speechbubble;
+      top: 4px;
     }
 
     &.views span.number::before {
       @include icon-eye;
+      top: 5px;
     }
 
-    a.post-acitivty .relative-date::before {
+    span.relative-date::before {
       @include icon-activity;
     }
 
