@@ -771,6 +771,13 @@ div.menu-links-header {
     }
 
   }
+
+  .topic-list-item-separator td {
+    border-bottom: 1px solid var(--midblue);
+    span {
+      color: var(--midblue);
+    }
+  }
 }
 
 .topic-list-main-link, .topic-list .main-link, .latest-topic-list-item .main-link {
@@ -815,6 +822,7 @@ est-topic-list-item.visited a.title:not(.badge-notification),
 }
 
 // Thread page
+// -----------
 
 .topic-title {
   h1 a {
@@ -824,4 +832,14 @@ est-topic-list-item.visited a.title:not(.badge-notification),
 
 .edit-topic {
   color: var(--midblue);
+}
+
+.topic-map {
+  border-radius: var(--rounded);
+}
+
+// Notices
+
+.post-notice {
+  background-color: var(--midblue-10);
 }
