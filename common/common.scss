@@ -771,16 +771,17 @@ div.menu-links-header {
 
     a.badge-posts .number::before {
       @include icon-speechbubble;
-      top: 4px;
+      top: 2px;
     }
 
     &.views span.number::before {
       @include icon-eye;
-      top: 5px;
+      top: 1px;
     }
 
     span.relative-date::before {
       @include icon-activity;
+      top: 2px;
     }
 
   }
@@ -808,6 +809,10 @@ div.menu-links-header {
 est-topic-list-item.visited a.title:not(.badge-notification), 
 .category-topic-link.visited a.title:not(.badge-notification) {
   color: var(--midnight);
+}
+
+.badge-notification.new-posts, .badge-notification.unread-posts {
+  color: var(--midblue);
 }
 
 // New Topic panel
