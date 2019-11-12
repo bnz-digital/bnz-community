@@ -748,25 +748,32 @@ div.menu-links-header {
   .num {
     text-align: left;
     padding: 0;
+    --icon-width: 1rem;
 
-    @mixin icon-before {
-      content: ' ';
-      width: 1rem;
-      @include icon;
+    a.badge-posts .number,
+    &.views span.number,
+    a.post-acitivty .relative-date {
+      position: relative;
+      padding-left: calc(var(--icon-width) + var(--u1));
+      &::before {
+        content: ' ';
+        width: var(--icon-width);
+        height: var(--u2);
+        position: absolute;
+        left: 0;
+        @include icon;
+      }
     }
 
     a.badge-posts .number::before {
-      @include icon-before;
       @include icon-speechbubble;
     }
 
-    &.views .number::before {
-      @include icon-before;
+    &.views span.number::before {
       @include icon-eye;
     }
 
     a.post-acitivty .relative-date::before {
-      @include icon-before;
       @include icon-activity;
     }
 
