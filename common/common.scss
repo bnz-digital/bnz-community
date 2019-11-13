@@ -126,6 +126,7 @@
   --blue-10:    rgba(0,47,107,0.1);
   --blue-30:    rgba(0,47,107,0.3);
   --blue-50:    rgba(0,47,107,0.5);
+  --blue-70:    rgba(0,47,107,0.7);
   --midblue-10: rgba(0,125,195,0.1);
 
   // Shadows
@@ -133,7 +134,10 @@
   --shadow-sml-med:   0 1px 3px var(--blue-30);
   --shadow-sml-dark:  0 1px 3px var(--blue-50);
 
-  --shadow-lrg-light:   0 3px 15px var(--blue-10);
+  --shadow-lrg-light: 0 3px 15px var(--blue-10);
+  --shadow-lrg-med:   0 3px 15px var(--blue-30);
+
+  --shadow-sml-med-inset: inset var(--shadow-sml-med);
 
 // Type
 
@@ -300,6 +304,11 @@ a:not([class]) {
   min-height: var(--u4);
 }
 
+button[aria-label~="Cancel"] {
+  color: var(--midblue);
+  background-color: white;
+}
+
 // Alerts
 
 .alert {
@@ -335,6 +344,12 @@ input[type="tel"],
 input[type="color"] {
   min-height: var(--u4);
   border-radius: var(--lilround);
+  box-shadow: var(--shadow-sml-med-inset),
+    inset 0 0 0 1px #B2C0D2;
+  &::placeholder {
+    font-style: italic;
+    color: var(--blue-70);
+  }
 }
 
 div.ac-wrap {
@@ -353,7 +368,7 @@ div.ac-wrap {
   }
   .select-kit-body {
     border-radius: var(--rounded);
-    box-shadow: var(--shadow-lrg-light);
+    box-shadow: var(--shadow-lrg-med);
   }
   &.mini-tag-chooser .select-kit-header {
     height: var(--u4);
@@ -557,10 +572,12 @@ div.menu-links-header {
 
 // Modals
 
-.bootbox.modal {
+.bootbox.modal,
+.modal-inner-container {
   border-radius: var(--rounded);
   padding: var(--u1);
 }
+
 
 // User menu panel
 
@@ -812,7 +829,7 @@ est-topic-list-item.visited a.title:not(.badge-notification),
 }
 
 .badge-notification.new-posts, .badge-notification.unread-posts {
-  color: var(--midblue);
+  background-color: var(--midblue);
 }
 
 // New Topic panel
@@ -828,7 +845,6 @@ est-topic-list-item.visited a.title:not(.badge-notification),
 #reply-control {
   max-width: var(--content-max);
   border-radius: var(--rounded) var(--rounded) 0 0;
-  padding-bottom: var(--u1);
   .save-or-cancel .cancel {
     color: var(--midblue);
   }
@@ -837,6 +853,12 @@ est-topic-list-item.visited a.title:not(.badge-notification),
 .open .grippie,
 #reply-control.draft, #reply-control.saving {
   border-radius: var(--rounded) var(--rounded) 0 0;
+}
+
+.select-kit .select-kit-row.is-highlighted {
+  background-color: white;
+  border-radius: var(--rounded);
+
 }
 
 // Thread page
