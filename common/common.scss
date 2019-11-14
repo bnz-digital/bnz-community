@@ -343,15 +343,12 @@ input[type="search"],
 input[type="tel"], 
 input[type="color"] {
   min-height: var(--u4);
+  border-radius: var(--lilround);
 }
 
 input,
 textarea,
 select {
-  border-radius: var(--lilround);
-  border: none;
-  box-shadow: var(--shadow-sml-med-inset),
-    inset 0 0 0 1px #B2C0D2;
   &::placeholder {
     font-style: italic;
     color: var(--blue-70);
@@ -379,6 +376,11 @@ div.ac-wrap {
   &.mini-tag-chooser .select-kit-header {
     height: var(--u4);
   }
+}
+
+.emoji-picker {
+  border-radius: var(--rounded);
+  box-shadow: var(--shadow-lrg-med);
 }
 
 
