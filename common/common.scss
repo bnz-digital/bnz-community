@@ -343,7 +343,13 @@ input[type="search"],
 input[type="tel"], 
 input[type="color"] {
   min-height: var(--u4);
+}
+
+input,
+textarea,
+select {
   border-radius: var(--lilround);
+  border: none;
   box-shadow: var(--shadow-sml-med-inset),
     inset 0 0 0 1px #B2C0D2;
   &::placeholder {
