@@ -804,10 +804,10 @@ div.menu-links-header {
       top: 1px;
     }
 
-    span.relative-date::before {
-      @include icon-activity;
-      top: 2px;
-    }
+    // span.relative-date::before {
+    //   @include icon-activity;
+    //   top: 2px;
+    // }
 
   }
 
