@@ -807,7 +807,7 @@ div.ac-wrap {
   .num {
     text-align: left;
     padding: 0;
-    --icon-width: 1rem;
+    $icon-width: 1rem;
 
     a.badge-posts .number,
     &.views span.number,
